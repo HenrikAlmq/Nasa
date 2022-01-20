@@ -1,13 +1,25 @@
-import { exportApi } from './modules/apiCall.mjs';
-import { listImages } from './modules/listImages.mjs';
+
+import { sendApiRequest } from './modules/apiCall.mjs';
+import { exportShowElement } from './modules/showElement.mjs';
 
 const global = {
     dynamic: document.getElementById('dynamic'),
 }
 export { global };   
 
-let test = exportApi();
+exportShowElement();
 
-//listImages();
-debugger;
+
+let button = document.getElementById('button');
+
+let inputDate = "05-10";
+let inputRover = "Curiosity";
+
+
+
+let test =  button.addEventListener("click", () => {
+     await sendApiRequest(inputDate, inputRover);
+});
+
+
 console.log(test);
