@@ -1,1 +1,6 @@
-import { apiCall } from '.modules/apiCall.mjs';
+import { exportApi } from './modules/apiCall.mjs';
+
+
+let test = exportApi();
+
+console.log(test);
