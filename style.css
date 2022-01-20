@@ -59,3 +59,17 @@ body{margin-top:20px;}
     border-radius: 6.25rem;
     opacity: .5
 }
+
+.col{
+    height: 100px;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
