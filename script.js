@@ -18,8 +18,8 @@ export { global };
 var getinputDate;
 var getRoverInput;
 
-function ShowElement() {
-    
+function ShowElement(stepOne) {
+    setTimelineActive(stepOne);
     let dynamic = document.getElementById('dynamic');
     let createSelect = document.createElement('select');
     createSelect.id = "selectInput";
@@ -45,7 +45,7 @@ function ShowElement() {
     dynamic.appendChild(createButton);
 }
 
-ShowElement();
+ShowElement(stepOne);
 
 let getNextButton = document.getElementById('showElementButton');
 
