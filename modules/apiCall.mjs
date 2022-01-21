@@ -17,11 +17,8 @@
         let API_KEY = "XZ8Ryto558Nax2OqbPAJsYsSlx7J6qTqPOCcWusS"
         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?earth_date=${apiDate}&page=1&api_key=${API_KEY}`);
         let data = await response.json();
-        console.log(data);
-        debugger;
+        //console.log(data);
+        //debugger;
         return data;
     }
-
-    
-
 
