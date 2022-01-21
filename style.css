@@ -18,8 +18,6 @@ body{
     margin: 1rem
 }
 
-
-
 @media (min-width:768px) {
     .timeline-steps .timeline-step:not(:last-child):after {
         content: "";

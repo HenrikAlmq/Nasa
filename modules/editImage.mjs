@@ -16,6 +16,7 @@ export function editImage(imageUrl) {
                     <label for="exampleFormControlTextarea1">Inbjudningstext</label> \
                     <textarea class="form-control" id="cardBodyTextInput" rows="3"></textarea> \
                     <button id="editBtn" type="submitCardTextBtn" class="btn btn-primary mt-3">Skicka texten till kortet</button> \
+                    <button id="printCardBtn" type="submitCardTextBtn" class="btn btn-primary mt-3">Skriv ut kortet</button> \
                 </div>');
     setTimelineActive(global.stepThree);
 
