@@ -3,7 +3,8 @@
 body{
     margin-top:20px;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto !important;
 }
 .timeline-steps {
     display: flex;
@@ -83,6 +84,13 @@ label {
     margin: .4rem 0;
 }
 
+footer {
+    position:static;
+    width: 100%;
+    border-radius: 1px;
+    bottom: 0px;
+}
+
 /* *** Styling edit Card *** */
 
 #demoWrapper {
@@ -130,9 +138,24 @@ label {
     }
 }
 
-footer {
-    position: absolute;
-    width: 100%;
-    border-radius: 1px;
-    bottom: 0px;
+/* @media (min-width: 1200px) { 
+
+    #headline{
+        font-size: 5vw !important;
+    }
+
+    #cardText{
+        font-size: 1.3vw !important;
+    }
+} */
+
+@media (max-width: 992px) { 
+
+    #headline{
+        font-size: 5vw !important;
+    }
+
+    #cardText{
+        font-size: 1.3vw !important;
+    }
 }
