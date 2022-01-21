@@ -12,15 +12,23 @@ export function editImage(imageUrl) {
                 </div> \
                 <div class="form-group col-sm-6 mt-3"> \
                     <label for="cardHeadlineInput">Rubrik</label> \
-                    <input type="text" class="form-control" id="cardHeadlineInput" aria-describedby="emailHelp" placeholder="Rubriktext"> \
+                    <input type="text" class="form-control" id="cardHeadlineInput" placeholder="Rubriktext"> \
                     <label for="exampleFormControlTextarea1">Inbjudningstext</label> \
                     <textarea class="form-control" id="cardBodyTextInput" rows="3"></textarea> \
-                    <button type="submitCardTextBtn" class="btn btn-primary mt-3">Skicka texten till kortet</button> \
+                    <button id="editBtn" type="submitCardTextBtn" class="btn btn-primary mt-3">Skicka texten till kortet</button> \
                 </div>');
     setTimelineActive(global.stepThree);
 
-    //let header = document.getElementById("cardHeadlineInput");
-    //let bodyText = document.getElementById("cardBodyTextInput");
+
+    let inputHeader = document.getElementById("cardHeadlineInput");
     let bodyText = document.getElementById("cardBodyTextInput");
+    let editBtn = document.getElementById("editBtn");
+    let headline = document.getElementById("headline");
+    let cardText = document.getElementById("cardText");
+
+    editBtn.addEventListener("click", async () => {
+        headline.innerText = inputHeader.value;
+        cardText.innerText = bodyText.value;
+    });
 }
 
