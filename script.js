@@ -15,8 +15,53 @@ const global = {
 export { global };
 
 //exportShowElement();
+var getinputDate;
+var getRoverInput;
 
-listImages("05-10", "Opportunity");
+function ShowElement() {
+    
+    let dynamic = document.getElementById('dynamic');
+    let createSelect = document.createElement('select');
+    createSelect.id = "selectInput";
+    let roverArray = ["Curiosity", "Spirit", "Opportunity"];
+    
+    for (let i = 0; i < roverArray.length; i++)
+    {
+        let option = document.createElement('option');
+        option.innerHTML = roverArray[i];
+        createSelect.appendChild(option);
+    }
+    
+    dynamic.appendChild(createSelect);
+
+    let createInput = document.createElement('input');
+    createInput.placeholder = "MM-DD";
+    createInput.id = "createInput";
+    dynamic.appendChild(createInput);
+
+    let createButton = document.createElement('button');
+    createButton.innerText = "Nästa";
+    createButton.id = "showElementButton"
+    dynamic.appendChild(createButton);
+}
+
+ShowElement();
+
+let getNextButton = document.getElementById('showElementButton');
+
+getNextButton.addEventListener("click", function(){
+    
+    getinputDate = createInput.value;
+    getRoverInput = document.getElementById('selectInput').value;
+    console.log(getinputDate);
+    console.log(getRoverInput);
+    listImages(getinputDate, getRoverInput);
+
+});
+
+
+
+
 
 
 export function setTimelineActive(element){ //Sätter timlinen till active för varje del parameter att skicka med: stepOne/stepTwo/stepThree/stepFour

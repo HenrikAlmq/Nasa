@@ -19,6 +19,7 @@ export function editImage(imageUrl) {
                 </div>');
     setTimelineActive(global.stepThree);
 
+
     let inputHeader = document.getElementById("cardHeadlineInput");
     let bodyText = document.getElementById("cardBodyTextInput");
     let editBtn = document.getElementById("editBtn");
