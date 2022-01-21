@@ -19,8 +19,8 @@ export function editImage(imageUrl) {
                 </div>');
     setTimelineActive(global.stepThree);
 
-    let header = document.getElementById("cardHeadlineInput");
-    let bodyText = document.getElementById("cardBodyTextInput");
+    //let header = document.getElementById("cardHeadlineInput");
+    //let bodyText = document.getElementById("cardBodyTextInput");
     let bodyText = document.getElementById("cardBodyTextInput");
 }
 
