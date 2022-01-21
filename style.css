@@ -38,17 +38,6 @@ body{margin-top:20px;}
 
 }
 
-@media (max-width: 576px) { 
-
-    #headline{
-        font-size: 7vw !important;
-    }
-
-    #cardText{
-        font-size: 2.4vw !important;
-    }
-}
-
 .timeline-steps .timeline-content {
     width: 10rem;
     text-align: center
@@ -90,6 +79,8 @@ label {
     margin: .4rem 0;
 }
 
+/* *** Styling edit Card *** */
+
 #demoWrapper {
     padding: 10px;
     background: white;
@@ -122,4 +113,15 @@ label {
     bottom: 0.5rem;
     text-shadow: black 2px 2px 6px;
     padding: 1rem;
+}
+
+@media (max-width: 576px) { 
+
+    #headline{
+        font-size: 7vw !important;
+    }
+
+    #cardText{
+        font-size: 2.4vw !important;
+    }
 }
