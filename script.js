@@ -1,25 +1,23 @@
 
 import { sendApiRequest } from './modules/apiCall.mjs';
 import { exportShowElement } from './modules/showElement.mjs';
+import { listImages } from './modules/listImages.mjs';
 
 const global = {
     dynamic: document.getElementById('dynamic'),
+    button: document.getElementById('button'),
+    stepOne: document.getElementById('stepOne'),
+    stepTwo: document.getElementById('stepTwo'),
+    stepTree: document.getElementById('stepTree'),
+    stepFour: document.getElementById('stepFour')
 }
-export { global };   
+export { global };
 
-exportShowElement();
+//exportShowElement();
 
-
-let button = document.getElementById('button');
-
-let inputDate = "05-10";
-let inputRover = "Curiosity";
+listImages("05-10", "Opportunity");
 
 
-
-let test =  button.addEventListener("click", () => {
-     await sendApiRequest(inputDate, inputRover);
-});
-
-
-console.log(test);
+export function setTimelineActive(element){
+    element.style.backgroundColor = "black";
+}

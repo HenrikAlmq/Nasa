@@ -11,27 +11,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- NAV BAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Mars Cards</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="cards.html">Cards</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav> 
-    <!-- END NAV BAR -->
-
     <div class="container">                      
         <div class="row text-center justify-content-center mb-5">
             <div class="col-xl-6 col-lg-8">
@@ -40,33 +19,33 @@
             </div>
         </div>
         <button id="button">test</button>
-        <div class="row">
-            <div class="col">
+        <div class="container">                      
+            <div class="row">
                 <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                            <div class="inner-circle"></div>
+                            <div id="stepOne" class="inner-circle"></div>
                             <p class="h6 mt-3 mb-1">Steg 1</p>
                             <p class="h6 text-muted mb-0 mb-lg-0">Välj Rover Och Datum</p>
                         </div>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
-                            <div class="inner-circle"></div>
+                            <div id="stepTwo" class="inner-circle"></div>
                             <p class="h6 mt-3 mb-1">Steg 2</p>
                             <p class="h6 text-muted mb-0 mb-lg-0">Välj Bild</p>
                         </div>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
-                            <div class="inner-circle"></div>
+                            <div id="stepTree" class="inner-circle"></div>
                             <p class="h6 mt-3 mb-1">Steg 3</p>
                             <p class="h6 text-muted mb-0 mb-lg-0">Gör Din Layout</p>
                         </div>
                     </div>
                     <div class="timeline-step mb-0">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
-                            <div class="inner-circle"></div>
+                            <div id="stepFour" class="inner-circle"></div>
                             <p class="h6 mt-3 mb-1">Steg 4</p>
                             <p class="h6 text-muted mb-0 mb-lg-0">Skriva ut kortet</p>
                         </div>
@@ -78,9 +57,20 @@
 
     <section class="container">
         <section class="col">
-            <div id="dynamic" class="col m-5">
-                <label for="start">Start date:</label>
-                <input type="date" id="start" name="trip-start">
+            <div id="dynamic" class="row justify-content-center">
+                <div id="demoWrapper" class="col-sm-6 mt-3">
+                    <div id="card" style= "background-image: url('https://mars.nasa.gov/mer/gallery/all/1/f/1169/1F231963288EFF820TP1211L0M1-BR.JPG')">
+                        <div id="headline" class="text-light">Lorem Cursus Malesuada</div>
+                        <div id="cardText" class="text-light">Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur.</div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-6 mt-3">
+                    <label for="cardHeadlineInput">Rubrik</label>
+                    <input type="text" class="form-control" id="cardHeadlineInput" aria-describedby="emailHelp" placeholder="Rubriktext">
+                    <label for="exampleFormControlTextarea1">Inbjudningstext</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <button type="submitCardTextBtn" class="btn btn-primary mt-3">Skicka texten till kortet</button>   
+                </div>
             </div>
         </section>
     </section>
